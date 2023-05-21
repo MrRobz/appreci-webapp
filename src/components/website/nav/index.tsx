@@ -1,15 +1,20 @@
+import Image from 'next/image'
+
 export const Nav = () => (
   <section className="bg-slate-light font-dm-sans">
     <nav>
-      <div className="m-auto max-w-default px-6 pt-6 md:px-0 md:pt-[53px]">
+      <div className="m-auto max-w-default px-6 pt-6 md:px-0 md:pt-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <a href="#">
-              <img
-                className="h-8 cursor-pointer md:h-auto"
-                src="/assets/heros/saaslogo.svg"
+            <a href="/" className="flex items-center gap-3">
+              <Image
+                className="h-8 cursor-pointer object-contain md:h-auto"
+                src="/assets/logos/appreci.png"
                 alt="Logo"
+                width={26}
+                height={60}
               />
+              <span className="font-dm-sans text-3xl">Appreci bot</span>
             </a>
           </div>
           <div className="relative"></div>

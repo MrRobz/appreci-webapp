@@ -17,16 +17,18 @@ export const Hero = () => {
                   recognize their achievements.
                 </p>
                 <div className="mt-9">
-                  <button className="inline-flex w-full justify-between gap-2 rounded-lg bg-primary px-8 py-4 text-desktop-paragraph text-white filter hover:brightness-125 md:w-auto	">
-                    Add to slack for free
-                    <SlackIcon />
-                  </button>
-                  <p className="mt-3 text-center font-inter text-[13px] text-slate-body md:text-left">
+                  <a href="https://slack.com/oauth/v2/authorize?client_id=5093803376433.5104871802944&scope=channels:read,chat:write,chat:write.public,commands,team:read,users.profile:read&user_scope=">
+                    <button className="inline-flex w-full justify-between gap-2 rounded-lg bg-primary px-8 py-4 text-desktop-paragraph text-white filter hover:brightness-125 md:w-auto	">
+                      Add to slack for free
+                      <SlackIcon />
+                    </button>
+                  </a>
+                  <p className="mt-3 text-center font-inter text-[13px] text-slate-500 md:text-left">
                     No credit card required
                   </p>
                 </div>
                 <div className="mt-12 pb-12 md:mr-5 md:pb-[90px]">
-                  <div className="flex flex-col items-center justify-center rounded-2xl bg-white px-4 py-4 md:flex-row md:items-start md:pb-9 md:pl-7 md:pr-10 md:pt-5">
+                  <div className="flex flex-col items-center justify-center rounded-2xl bg-white px-4 py-4 md:flex-row md:items-start md:pb-5 md:pl-7 md:pr-10 md:pt-5">
                     <Image
                       className="flex h-20 w-20 rounded-full border border-slate-body md:mt-2"
                       src="/assets/heros/ashwathy.jpeg"
@@ -40,7 +42,7 @@ export const Hero = () => {
                         setting us up for long-term success.”
                       </p>
                       <p className="mt-4 font-inter text-[13px] text-slate-body opacity-50 md:mt-1">
-                        Ashwathy Philip - People Operations at Drivetrain
+                        Ashwathy Philip - People Operations at Drivetrain.ai
                       </p>
                     </div>
                   </div>
