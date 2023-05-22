@@ -27,6 +27,7 @@ module.exports = {
       colors: {
         background: '#F9F9F9',
         primary: '#5052CD',
+        green: '#33C1AE',
         'slate-light': '#F9F9F9', // theme: slate, background color
         'slate-orange': '#FF5930', // theme: slate, primary orange
         'slate-headline': '#1C202B', // theme: slate, headline color

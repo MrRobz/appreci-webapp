@@ -12,14 +12,14 @@ export const Feature9 = () => {
             <div className="flex h-full items-center">
               <div className="py-12 text-center md:py-0">
                 <h2 className="text-mobile-h2 font-medium leading-snug text-slate-headline md:text-desktop-h2">
-                  Highlight a key selling point
+                  Celebrate in the moment by giving kudos
                 </h2>
-                <p className="pt-6 text-desktop-subheading">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <p className="pt-6 font-inter text-desktop-subheading">
+                  Celebrate achievements within Slack by sharing kudos with all.
                 </p>
-                <p className="cursor-pointer pt-6 text-desktop-paragraph underline">
+                {/* <p className="cursor-pointer pt-6 text-desktop-paragraph underline">
                   Learn more
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

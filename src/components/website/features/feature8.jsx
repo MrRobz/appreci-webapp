@@ -7,13 +7,14 @@ export const Feature8 = () => {
             <div className="flex h-full items-center">
               <div className="py-12 text-center md:py-0">
                 <h2 className="text-mobile-h2 font-medium leading-snug text-slate-headline md:text-desktop-h2">
-                  Highlight a key selling point
+                  Customize kudos to reflect company values
                 </h2>
-                <p className="pt-6 text-desktop-subheading">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <p className="pt-6 font-inter text-desktop-subheading">
+                  Customize kudos templates and make people feel closer to the
+                  company and each other.
                 </p>
                 <p className="cursor-pointer pt-6 text-desktop-paragraph underline">
-                  Learn more
+                  Coming soon
                 </p>
               </div>
             </div>

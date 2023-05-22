@@ -1,9 +1,17 @@
+import Image from 'next/image'
+
 const StepTile = ({ image, text, description }) => (
   <div className="h-[262px] w-full rounded-3xl bg-white px-8 py-[50px] text-center transition-all duration-300 hover:shadow-sm">
     <div>
-      <img className="m-auto h-12 w-12" src={image} alt={text} />
+      <Image
+        className="m-auto -mb-9 h-24 w-24"
+        src={image}
+        alt={text}
+        width={48}
+        height={48}
+      />
       <div className="mb-3 mt-11">
-        <span className="rounded-full bg-slate-orange px-[14px] py-[5px] text-sm font-medium text-white">
+        <span className="rounded-full bg-primary px-[14px] py-[5px] text-sm font-medium text-white">
           {text}
         </span>
       </div>
@@ -19,7 +27,7 @@ export const Steps = () => (
     <div className="m-auto max-w-default px-6 py-12 font-dm-sans md:px-0 md:py-[90px]">
       <div className="m-auto max-w-[589px] text-center">
         <h5 className="text-base font-bold uppercase text-slate-orange">
-          Start in seconds
+          Get Appreci running in seconds
         </h5>
         <h2 className="mt-[18px] text-mobile-h2 font-medium text-slate-body md:text-desktop-h2">
           Get started in four easy steps
@@ -27,24 +35,24 @@ export const Steps = () => (
       </div>
       <div className="mt-[60px] space-y-[30px] md:flex md:space-x-[30px] md:space-y-0">
         <StepTile
-          image={'/assets/steps/mouse.svg'}
+          image={'/assets/steps/hand1.png'}
           text={'Step 1'}
-          description={'Easy one click sign-up'}
+          description={'Install Appreci on your slack workspace'}
         />
         <StepTile
-          image={'/assets/steps/gridview.svg'}
+          image={'/assets/steps/hand2.png'}
           text={'Step 2'}
-          description={'Choose a high quality template'}
+          description={'Invite Appreci to a channel'}
         />
         <StepTile
-          image={'/assets/steps/algorithm.svg'}
+          image={'/assets/steps/hand3.png'}
           text={'Step 3'}
-          description={'Access our API'}
+          description={'Type “/kudos” to trigger kudos form'}
         />
         <StepTile
-          image={'/assets/steps/components.svg'}
+          image={'/assets/steps/hand4.png'}
           text={'Step 4'}
-          description={'Generate finished templates'}
+          description={'Send and receive Kudos'}
         />
       </div>
     </div>
