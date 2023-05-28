@@ -10,7 +10,7 @@ export const Hero = () => {
             <div className="order-1 w-full md:order-1 md:mr-[17px]">
               <div className="mt-[90px] md:mt-0">
                 <h1 className="text-mobile-h1 font-medium text-slate-headline md:text-desktop-h1">
-                  Build stronger, happier teams.
+                  Build stronger, happier teams on Slack.
                 </h1>
                 <p className="mt-4 text-desktop-subheading text-slate-body md:mt-4">
                   With Appreci, easily send kudos to your teammates and

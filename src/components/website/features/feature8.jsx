@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const Feature8 = () => {
   return (
     <section className="bg-slate-light py-12 font-dm-sans md:py-[90px]">
@@ -21,7 +23,12 @@ export const Feature8 = () => {
           </div>
           <div className="mx-6 pb-12 md:mx-0 md:w-1/2 md:pb-0">
             <div className="md:mx-7 md:my-[32px]">
-              <img src="/assets/features/feature9banner.svg" alt="banner" />
+              <Image
+                width={516}
+                height={516}
+                src="/assets/features/feature-banner-2.png"
+                alt="banner"
+              />
             </div>
           </div>
         </div>
