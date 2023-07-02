@@ -1,6 +1,6 @@
 const PrimaryButton = () => (
   <div className="pt-12">
-    <a href="https://slack.com/oauth/v2/authorize?client_id=5093803376433.5104871802944&scope=channels:read,chat:write,chat:write.public,commands,team:read,users.profile:read&user_scope=">
+    <a href="https://server.apprecibot.com/slack/install">
       <button className="rounded-lg bg-primary px-12 py-4 font-dm-sans text-desktop-paragraph font-medium text-white hover:opacity-90">
         Add to Slack for free
       </button>

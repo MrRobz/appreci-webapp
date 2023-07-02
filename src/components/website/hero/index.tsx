@@ -17,7 +17,7 @@ export const Hero = () => {
                   recognize their achievements.
                 </p>
                 <div className="mt-9">
-                  <a href="https://slack.com/oauth/v2/authorize?client_id=5093803376433.5104871802944&scope=channels:read,chat:write,chat:write.public,commands,team:read,users.profile:read&user_scope=">
+                  <a href="https://server.apprecibot.com/slack/install">
                     <button className="inline-flex w-full justify-between gap-2 rounded-lg bg-primary px-8 py-4 text-desktop-paragraph text-white filter hover:brightness-125 md:w-auto	">
                       Add to slack for free
                       <SlackIcon />
