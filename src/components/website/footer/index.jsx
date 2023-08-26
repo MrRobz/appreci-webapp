@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const Footer = () => (
   <footer className="bg-slate-light font-dm-sans">
@@ -21,11 +22,11 @@ export const Footer = () => (
       <hr className="my-6" />
       <div className="flex justify-between">
         <p> Copyright {new Date().getFullYear()} </p>
-        {/* <div className="flex space-x-10">
-          <img src="/assets/footers/twitter.svg" />
-          <img src="/assets/footers/facebook.svg" />
-          <img src="/assets/footers/youtube.svg" />
-        </div> */}
+        <div className="flex space-x-10">
+          <Link href="/privacy-policy">
+            <span className="text-xs">Privacy policy</span>
+          </Link>
+        </div>
       </div>
     </div>
   </footer>
