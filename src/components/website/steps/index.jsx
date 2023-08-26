@@ -37,7 +37,7 @@ export const Steps = () => (
         <StepTile
           image={'/assets/steps/hand1.png'}
           text={'Step 1'}
-          description={'Install Appreci on your slack workspace'}
+          description={'Install Appreci on your Slack workspace'}
         />
         <StepTile
           image={'/assets/steps/hand2.png'}

@@ -15,7 +15,7 @@ export const Footer = () => (
           <span className="font-dm-sans text-3xl">Appreci bot</span>
         </a>
         <p className="mt-6 text-sm font-normal text-slate-body md:mt-0 md:w-1/5">
-          Peer appreciation tool on slack.
+          Peer appreciation tool on Slack.
         </p>
       </div>
       <hr className="my-6" />

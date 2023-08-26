@@ -19,7 +19,7 @@ export const Hero = () => {
                 <div className="mt-9">
                   <a href="https://server.apprecibot.com/slack/install">
                     <button className="inline-flex w-full justify-between gap-2 rounded-lg bg-primary px-8 py-4 text-desktop-paragraph text-white filter hover:brightness-125 md:w-auto	">
-                      Add to slack for free
+                      Add to Slack for free
                       <SlackIcon />
                     </button>
                   </a>
