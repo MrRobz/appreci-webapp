@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 export const Feature8 = () => {
   return (
@@ -15,9 +15,9 @@ export const Feature8 = () => {
                   Customize kudos templates and make people feel closer to the
                   company and each other.
                 </p>
-                <p className="cursor-pointer pt-6 text-desktop-paragraph underline">
-                  Coming soon
-                </p>
+                {/* <p className="cursor-pointer pt-6 text-desktop-paragraph underline">
+                  Learn more
+                </p> */}
               </div>
             </div>
           </div>
@@ -34,5 +34,5 @@ export const Feature8 = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

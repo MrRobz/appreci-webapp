@@ -1,5 +1,5 @@
-import { SERVER_URL } from '@/config/api'
-import Image from 'next/image'
+import { SERVER_URL } from '@/config/api';
+import Image from 'next/image';
 
 export const Nav = () => {
   return (
@@ -19,17 +19,17 @@ export const Nav = () => {
                 <span className="font-dm-sans text-3xl">Appreci bot</span>
               </a>
             </div>
-            <div className="relative">
+            {/* <div className="relative">
               <a
                 href={`${SERVER_URL}/api/v1/app/auth/slack`}
                 className="text-slate-600 hover:text-slate-800"
               >
                 Sign in
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>
     </section>
-  )
-}
+  );
+};
