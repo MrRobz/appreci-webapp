@@ -1,12 +1,13 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-import localFont from 'next/font/local'
+import './globals.css';
+import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
-})
+});
 
 const trueno = localFont({
   src: [
@@ -54,21 +55,32 @@ const trueno = localFont({
     },
   ],
   variable: '--font-trueno',
-})
+});
 
 export const metadata = {
   title: 'Apperci bot',
   description: 'Employee recognition and celebrations - all inside Slack',
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${trueno.variable}`}>{children}</body>
+
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-R5XHZ1VVC4');
+        `}
+      </Script>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-R5XHZ1VVC4" />
     </html>
-  )
+  );
 }
