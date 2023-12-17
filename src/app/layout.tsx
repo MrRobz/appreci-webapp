@@ -71,6 +71,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${trueno.variable}`}>{children}</body>
 
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-R5XHZ1VVC4" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -80,7 +81,6 @@ export default function RootLayout({
           gtag('config', 'G-R5XHZ1VVC4');
         `}
       </Script>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-R5XHZ1VVC4" />
     </html>
   );
 }
