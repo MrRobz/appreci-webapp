@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+import Head from 'next/head';
 import Script from 'next/script';
 
 const inter = Inter({
@@ -69,6 +70,51 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <title>
+          Apperci bot: Employee recognition and celebrations - inside Slack
+        </title>
+        <meta
+          name="title"
+          content="Apperci bot: Employee recognition and celebrations - inside Slack"
+        />
+        <meta
+          name="description"
+          content="Make employee recognition, celebrations, & rewards fun - all inside Slack. 
+          With Appreci, easily send kudos to your teammates and recognize their achievements."
+        />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://apprecibot.com/" />
+        <meta
+          property="og:title"
+          content="Apperci bot: Employee recognition and celebrations - inside Slack"
+        />
+        <meta
+          property="og:description"
+          content="Make employee recognition, celebrations, & rewards fun - all inside Slack. 
+          With Appreci, easily send kudos to your teammates and recognize their achievements."
+        />
+        <meta property="og:image" content="/assets/meta/meta-hero.png" />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://apprecibot.com/" />
+        <meta
+          property="twitter:title"
+          content="Apperci bot: Employee recognition and celebrations - inside Slack"
+        />
+        <meta
+          property="twitter:description"
+          content="Make employee recognition, celebrations, & rewards fun - all inside Slack. 
+          With Appreci, easily send kudos to your teammates and recognize their achievements."
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+      </Head>
       <body className={`${inter.variable} ${trueno.variable}`}>{children}</body>
 
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-R5XHZ1VVC4" />
