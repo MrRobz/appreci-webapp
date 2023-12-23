@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -58,9 +59,29 @@ const trueno = localFont({
   variable: '--font-trueno',
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Apperci bot',
-  description: 'Employee recognition and celebrations - all inside Slack',
+  description:
+    'Make employee recognition, celebrations, & rewards fun - all inside Slack. With Appreci, easily send kudos to your teammates and recognize their achievements.',
+  openGraph: {
+    type: 'website',
+    url: 'https://apprecibot.com',
+    title: 'Apperci bot: Employee recognition and celebrations - inside Slack',
+    description:
+      'Make employee recognition, celebrations, & rewards fun - all inside Slack. With Appreci, easily send kudos to your teammates and recognize their achievements.',
+    images: [
+      {
+        url: '/assets/meta/meta-hero.png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Apperci bot: Employee recognition and celebrations - inside Slack',
+    description:
+      'Make employee recognition, celebrations, & rewards fun - all inside Slack. With Appreci, easily send kudos to your teammates and recognize their achievements.',
+    images: '/assets/meta/meta-hero.png',
+  },
 };
 
 export default function RootLayout({
@@ -74,46 +95,6 @@ export default function RootLayout({
         <title>
           Apperci bot: Employee recognition and celebrations - inside Slack
         </title>
-        <meta
-          name="title"
-          content="Apperci bot: Employee recognition and celebrations - inside Slack"
-        />
-        <meta
-          name="description"
-          content="Make employee recognition, celebrations, & rewards fun - all inside Slack. 
-          With Appreci, easily send kudos to your teammates and recognize their achievements."
-        />
-
-        {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://apprecibot.com/" />
-        <meta
-          property="og:title"
-          content="Apperci bot: Employee recognition and celebrations - inside Slack"
-        />
-        <meta
-          property="og:description"
-          content="Make employee recognition, celebrations, & rewards fun - all inside Slack. 
-          With Appreci, easily send kudos to your teammates and recognize their achievements."
-        />
-        <meta property="og:image" content="/assets/meta/meta-hero.png" />
-
-        {/* <!-- Twitter --> */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://apprecibot.com/" />
-        <meta
-          property="twitter:title"
-          content="Apperci bot: Employee recognition and celebrations - inside Slack"
-        />
-        <meta
-          property="twitter:description"
-          content="Make employee recognition, celebrations, & rewards fun - all inside Slack. 
-          With Appreci, easily send kudos to your teammates and recognize their achievements."
-        />
-        <meta
-          property="twitter:image"
-          content="https://metatags.io/images/meta-tags.png"
-        />
       </Head>
       <body className={`${inter.variable} ${trueno.variable}`}>{children}</body>
 
