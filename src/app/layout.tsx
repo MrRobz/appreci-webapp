@@ -60,7 +60,7 @@ const trueno = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Apperci bot',
+  title: 'Apperci bot: Employee recognition and celebrations - inside Slack',
   description:
     'Make employee recognition, celebrations, & rewards fun - all inside Slack. With Appreci, easily send kudos to your teammates and recognize their achievements.',
   openGraph: {
