@@ -95,10 +95,6 @@ export default function RootLayout({
         <title>
           Apperci bot: Employee recognition and celebrations - inside Slack
         </title>
-        <meta
-          name="ahrefs-site-verification"
-          content="d8f4daec0f27ad9b647a94d2f35f20f256811fc88bf191c3b991dbef5acb17d6"
-        />
       </Head>
 
       <body className={`${inter.variable} ${trueno.variable}`}>{children}</body>
