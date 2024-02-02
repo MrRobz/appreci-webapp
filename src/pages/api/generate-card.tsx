@@ -1,55 +1,59 @@
 /* eslint-disable @next/next/no-img-element */
-import { ImageResponse } from '@vercel/og'
-import { NextRequest } from 'next/server'
-import { CSSProperties } from 'react'
+import { ImageResponse } from '@vercel/og';
+import { NextRequest } from 'next/server';
+import { CSSProperties } from 'react';
 import {
   rocketImageUrl,
   star1ImageUrl,
   star2ImageUrl,
-} from './constants/card-images'
+} from './constants/card-images';
 
 export const config = {
   runtime: 'edge',
-}
+};
 
 const font1 = fetch(
   new URL('../../assets/jua-regular-webfont.woff', import.meta.url)
-).then((res) => res.arrayBuffer())
+).then((res) => res.arrayBuffer());
 
 const imageMargin = (itemLength: number, index: number): CSSProperties => {
   if (itemLength === 1) {
-    return {}
+    return {};
   }
   if (itemLength === 2) {
-    return index === 0 ? { marginRight: '-16px' } : { marginLeft: '-16px' }
+    return index === 0 ? { marginRight: '-16px' } : { marginLeft: '-16px' };
   }
   if (itemLength === 3) {
     if (index === 0) {
-      return { marginRight: '-32px' }
+      return { marginRight: '-32px' };
     }
     if (index === 2) {
-      return { marginLeft: '-32px' }
+      return { marginLeft: '-32px' };
     }
   }
 
-  return {}
-}
+  return {};
+};
 
 export default async function handler(req: NextRequest) {
   try {
-    const [font1Data] = await Promise.all([font1])
+    const [font1Data] = await Promise.all([font1]);
 
-    const { searchParams } = new URL(req.url)
+    const { searchParams } = new URL(req.url);
 
-    const company = searchParams.get('company')
-    const appreciateValue = searchParams.get('kValue')
-    const appreciateContent = searchParams.get('kContent') || ''
-    const avatarImgs = searchParams.getAll('kAvatarImg[]') || []
+    const company = searchParams.get('company');
+    const appreciateValue = searchParams.get('kValue');
+    const appreciateContent = searchParams.get('kContent') || '';
+    const avatarImgs = searchParams.getAll('kAvatarImg[]') || [];
 
-    const lettersInOneLine = 40
-    const lines = Math.ceil(appreciateContent.length / lettersInOneLine)
-    const imgHeight = avatarImgs.length ? 300 : 0
-    const height = 500 + imgHeight + lines * 70 + 50
+    console.log(appreciateContent);
+
+    const lettersInOneLine = 40;
+    const noOfNewLines = (appreciateContent.match(/\n/g) || []).length;
+    const lines =
+      Math.ceil(appreciateContent.length / lettersInOneLine) + noOfNewLines;
+    const imgHeight = avatarImgs.length ? 300 : 0;
+    const height = 500 + imgHeight + lines * 70 + 50;
 
     return new ImageResponse(
       (
@@ -154,10 +158,12 @@ export default async function handler(req: NextRequest) {
             )}
 
             <div
-              tw="mt-24 flex text-5xl"
+              tw="mt-24 flex text-5xl flex-col"
               style={{ fontFamily: 'Jua', lineHeight: '89px' }}
             >
-              {appreciateContent}
+              {appreciateContent.split(/\n/).map((item, idx) => {
+                return <div key={idx}>{item}</div>;
+              })}
             </div>
           </div>
         </div>
@@ -173,10 +179,10 @@ export default async function handler(req: NextRequest) {
           },
         ],
       }
-    )
+    );
   } catch (e: any) {
     return new Response(`Failed to generate the image`, {
       status: 500,
-    })
+    });
   }
 }
