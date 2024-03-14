@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import { SlackIcon } from '../icons'
+import Image from 'next/image';
+import { SlackIcon } from '../icons';
 
 export const Hero = () => {
   return (
@@ -42,7 +42,10 @@ export const Hero = () => {
                         setting us up for long-term success.”
                       </p>
                       <p className="mt-4 font-inter text-[13px] text-slate-body opacity-50 md:mt-1">
-                        Ashwathy Philip - People Operations at Drivetrain.ai
+                        Ashwathy Philip - People Operations at{' '}
+                        <a href="https://www.drivetrain.ai" target="_blank">
+                          Drivetrain.ai
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -71,5 +74,5 @@ export const Hero = () => {
         </div>
       </section>
     </section>
-  )
-}
+  );
+};

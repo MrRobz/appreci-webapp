@@ -46,8 +46,6 @@ export default async function handler(req: NextRequest) {
     const appreciateContent = searchParams.get('kContent') || '';
     const avatarImgs = searchParams.getAll('kAvatarImg[]') || [];
 
-    console.log(appreciateContent);
-
     const lettersInOneLine = 40;
     const noOfNewLines = (appreciateContent.match(/\n/g) || []).length;
     const lines =
