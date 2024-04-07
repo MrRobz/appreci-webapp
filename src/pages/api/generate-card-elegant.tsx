@@ -40,13 +40,14 @@ export default async function handler(req: NextRequest) {
     const appreciateValue = searchParams.get('kValue');
     const appreciateContent = searchParams.get('kContent') || '';
     const avatarImgs = searchParams.getAll('kAvatarImg[]') || [];
+    const kudosFrom = searchParams.getAll('kFrom') || '';
 
-    const lettersInOneLine = 40;
+    const lettersInOneLine = 32;
     const noOfNewLines = (appreciateContent.match(/\n/g) || []).length;
     const lines =
       Math.ceil(appreciateContent.length / lettersInOneLine) + noOfNewLines;
-    const imgHeight = avatarImgs.length ? 300 : 0;
-    const height = 500 + imgHeight + lines * 70 + 50;
+    const imgHeight = avatarImgs.length ? 360 : 0;
+    const height = 360 + imgHeight + lines * 55 + (lines - 1) * 20;
 
     return new ImageResponse(
       (
@@ -67,7 +68,7 @@ export default async function handler(req: NextRequest) {
             }}
           >
             <div
-              tw="p-6 flex flex-col w-full rounded-xl"
+              tw="px-6 flex flex-col w-full rounded-xl"
               style={{
                 border: '3px dashed #5C45FF',
               }}
@@ -122,7 +123,9 @@ export default async function handler(req: NextRequest) {
             </div>
           </div>
 
-          <div tw="flex mt-4 mr-2 text-white justify-end text-lg">By Robin</div>
+          <div tw="flex mt-4 mr-2 text-white justify-end text-lg">
+            From {kudosFrom}
+          </div>
         </div>
       ),
       {
