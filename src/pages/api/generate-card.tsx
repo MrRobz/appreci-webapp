@@ -12,7 +12,7 @@ export const config = {
   runtime: 'edge',
 };
 
-const font1 = fetch(
+const juaFont = fetch(
   new URL('../../assets/jua-regular-webfont.woff', import.meta.url)
 ).then((res) => res.arrayBuffer());
 
@@ -35,14 +35,35 @@ const imageMargin = (itemLength: number, index: number): CSSProperties => {
   return {};
 };
 
+const getValueFontSize = (appreciateValue: string): string => {
+  const length = appreciateValue.length;
+  if (length <= 20) {
+    return '80px';
+  } else if (length >= 20 && length < 30) {
+    return '60px';
+  } else if (length >= 30 && length < 40) {
+    return '40px';
+  } else if (length >= 40 && length < 45) {
+    return '38px';
+  } else if (length >= 45 && length < 50) {
+    return '34px';
+  } else if (length >= 50 && length < 55) {
+    return '30px';
+  } else if (length >= 55 && length < 60) {
+    return '28px';
+  }
+
+  return '20px';
+};
+
 export default async function handler(req: NextRequest) {
   try {
-    const [font1Data] = await Promise.all([font1]);
+    const [juaFontData] = await Promise.all([juaFont]);
 
     const { searchParams } = new URL(req.url);
 
-    const company = searchParams.get('company');
-    const appreciateValue = searchParams.get('kValue');
+    const appreciateValue = searchParams.get('kValue') || '';
+    const company = searchParams.get('company') || '';
     const appreciateContent = searchParams.get('kContent') || '';
     const avatarImgs = searchParams.getAll('kAvatarImg[]') || [];
 
@@ -52,6 +73,10 @@ export default async function handler(req: NextRequest) {
       Math.ceil(appreciateContent.length / lettersInOneLine) + noOfNewLines;
     const imgHeight = avatarImgs.length ? 300 : 0;
     const height = 500 + imgHeight + lines * 70 + 50;
+
+    const imageWidth = 1080;
+
+    const appreciateValueFontSize = getValueFontSize(appreciateValue);
 
     return new ImageResponse(
       (
@@ -70,14 +95,18 @@ export default async function handler(req: NextRequest) {
               tw="mt-8 w-full flex justify-center uppercase pt-3"
               style={{
                 color: '#9C57FF',
-                fontSize: '100px',
-                lineHeight: '120px',
-                border: '5.5px solid #F8D966',
                 fontFamily: 'Jua',
+                fontSize: appreciateValueFontSize,
               }}
             >
               {appreciateValue}
             </div>
+            <div
+              tw="mt-4 w-full flex justify-center"
+              style={{
+                borderBottom: '5.5px solid #F8D966',
+              }}
+            />
 
             {avatarImgs?.length > 0 && (
               <div tw="mt-28 w-full flex justify-center">
@@ -167,12 +196,13 @@ export default async function handler(req: NextRequest) {
         </div>
       ),
       {
-        width: 1080,
+        width: imageWidth,
         height: height,
+        emoji: 'fluent',
         fonts: [
           {
             name: 'Jua',
-            data: font1Data,
+            data: juaFontData,
             style: 'normal',
           },
         ],

@@ -131,6 +131,7 @@ export default async function handler(req: NextRequest) {
       {
         width: 1080,
         height: height,
+        emoji: 'fluentFlat',
         fonts: [
           {
             name: 'Poppins',
