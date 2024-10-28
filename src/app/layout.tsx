@@ -60,13 +60,13 @@ const trueno = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Apperci bot: Employee recognition and celebrations - inside Slack',
+  title: 'Appreci bot: Employee recognition and celebrations - inside Slack',
   description:
     'Make employee recognition and celebrations fun - all inside Slack. With Appreci, easily send kudos to your teammates and recognize their achievements.',
   openGraph: {
     type: 'website',
     url: 'https://apprecibot.com',
-    title: 'Apperci bot: Employee recognition and celebrations - inside Slack',
+    title: 'Appreci bot: Employee recognition and celebrations - inside Slack',
     description:
       'Make employee recognition and celebrations fun - all inside Slack. With Appreci, easily send kudos to your teammates and recognize their achievements.',
     images: [
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Apperci bot: Employee recognition and celebrations - inside Slack',
+    title: 'Appreci bot: Employee recognition and celebrations - inside Slack',
     description:
       'Make employee recognition and celebrations fun - all inside Slack. With Appreci, easily send kudos to your teammates and recognize their achievements.',
     images: '/assets/meta/meta-hero.png',
@@ -93,7 +93,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <title>
-          Apperci bot: Employee recognition and celebrations - inside Slack
+          Appreci bot: Employee recognition and celebrations - inside Slack
         </title>
       </Head>
 
