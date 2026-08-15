@@ -1,3 +1,4 @@
+import { assetPath } from '@/utils/asset-path';
 import Image from 'next/image';
 import { ReactElement } from 'react';
 
@@ -10,7 +11,7 @@ export const LeftNav = ({}: Props): ReactElement => {
         <div className="flex items-center gap-2">
           <Image
             className="h-12 object-contain"
-            src="/assets/logos/appreci.png"
+            src={assetPath('/assets/logos/appreci.png')}
             alt="Logo"
             width={26}
             height={60}

@@ -1,3 +1,4 @@
+import { assetPath } from '@/utils/asset-path';
 import { Metadata } from 'next';
 import './globals.css';
 import { Inter } from 'next/font/google';
@@ -71,7 +72,7 @@ export const metadata: Metadata = {
       'Make employee recognition and celebrations fun - all inside Slack. With Appreci, easily send kudos to your teammates and recognize their achievements.',
     images: [
       {
-        url: '/assets/meta/meta-hero.png',
+        url: assetPath('/assets/meta/meta-hero.png'),
       },
     ],
   },
@@ -80,7 +81,7 @@ export const metadata: Metadata = {
     title: 'Appreci bot: Employee recognition and celebrations - inside Slack',
     description:
       'Make employee recognition and celebrations fun - all inside Slack. With Appreci, easily send kudos to your teammates and recognize their achievements.',
-    images: '/assets/meta/meta-hero.png',
+    images: assetPath('/assets/meta/meta-hero.png'),
   },
 };
 

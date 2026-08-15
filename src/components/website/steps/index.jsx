@@ -1,3 +1,4 @@
+import { assetPath } from '@/utils/asset-path';
 import Image from 'next/image'
 
 const StepTile = ({ image, text, description }) => (
@@ -35,22 +36,22 @@ export const Steps = () => (
       </div>
       <div className="mt-[60px] space-y-[30px] md:flex md:space-x-[30px] md:space-y-0">
         <StepTile
-          image={'/assets/steps/hand1.png'}
+          image={assetPath('/assets/steps/hand1.png')}
           text={'Step 1'}
           description={'Install Appreci on your Slack workspace'}
         />
         <StepTile
-          image={'/assets/steps/hand2.png'}
+          image={assetPath('/assets/steps/hand2.png')}
           text={'Step 2'}
           description={'Invite Appreci to a channel'}
         />
         <StepTile
-          image={'/assets/steps/hand3.png'}
+          image={assetPath('/assets/steps/hand3.png')}
           text={'Step 3'}
           description={'Type “/kudos” to trigger kudos form'}
         />
         <StepTile
-          image={'/assets/steps/hand4.png'}
+          image={assetPath('/assets/steps/hand4.png')}
           text={'Step 4'}
           description={'Send and receive Kudos'}
         />

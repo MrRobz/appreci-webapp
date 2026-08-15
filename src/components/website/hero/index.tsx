@@ -1,3 +1,4 @@
+import { assetPath } from '@/utils/asset-path';
 import Image from 'next/image';
 import { SlackIcon } from '../icons';
 
@@ -31,7 +32,7 @@ export const Hero = () => {
                   <div className="flex flex-col items-center justify-center rounded-2xl bg-white px-4 py-4 md:flex-row md:items-start md:pb-5 md:pl-7 md:pr-10 md:pt-5">
                     <Image
                       className="flex h-20 w-20 rounded-full border border-slate-body md:mt-2"
-                      src="/assets/heros/ashwathy.jpeg"
+                      src={assetPath('/assets/heros/ashwathy.jpeg')}
                       width={74}
                       height={74}
                       alt="Person Profile Picture"
@@ -56,14 +57,14 @@ export const Hero = () => {
               <div className="relative flex items-center justify-center rounded-3xl">
                 <Image
                   className="-mb-10 -mt-10 rounded-lg"
-                  src="/assets/heros/appreciation-card-4.png"
+                  src={assetPath('/assets/heros/appreciation-card-4.png')}
                   alt=""
                   width={494}
                   height={672}
                 />
                 <Image
                   className="absolute -bottom-24 left-1/2 -ml-4 -translate-x-1/2 transform"
-                  src="/assets/heros/arrow.png"
+                  src={assetPath('/assets/heros/arrow.png')}
                   width={234}
                   height={46}
                   alt=""

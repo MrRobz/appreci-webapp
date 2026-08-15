@@ -1,3 +1,4 @@
+import { assetPath } from '@/utils/asset-path';
 import Image from 'next/image'
 
 export const Feature9 = () => {
@@ -10,7 +11,7 @@ export const Feature9 = () => {
               <Image
                 width={516}
                 height={532}
-                src="/assets/features/feature-banner-1.png"
+                src={assetPath('/assets/features/feature-banner-1.png')}
                 alt="banner"
               />
             </div>

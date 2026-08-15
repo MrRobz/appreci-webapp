@@ -1,3 +1,4 @@
+import { assetPath } from '@/utils/asset-path';
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -8,7 +9,7 @@ export const Footer = () => (
         <a href="/" className="flex items-center gap-3">
           <Image
             className="h-8 cursor-pointer object-contain md:h-auto"
-            src="/assets/logos/appreci.png"
+            src={assetPath('/assets/logos/appreci.png')}
             alt="Logo"
             width={26}
             height={60}

@@ -1,3 +1,4 @@
+import { assetPath } from '@/utils/asset-path';
 import { SERVER_URL } from '@/config/api';
 import Image from 'next/image';
 
@@ -11,7 +12,7 @@ export const Nav = () => {
               <a href="/" className="flex items-center gap-3">
                 <Image
                   className="h-8 cursor-pointer object-contain md:h-auto"
-                  src="/assets/logos/appreci.png"
+                  src={assetPath('/assets/logos/appreci.png')}
                   alt="Logo"
                   width={26}
                   height={60}
